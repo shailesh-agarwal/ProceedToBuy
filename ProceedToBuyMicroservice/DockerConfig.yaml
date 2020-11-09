@@ -1,0 +1,33 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dockerconfig-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: DockerConfig
+  template:
+    metadata:
+      labels:
+        app: DockerConfig
+    spec:
+      containers:
+      - name: proceedtobuyrepos
+        image: mfpeacr.azurecr.io/proceedtobuyrepos:latest
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: dconfigsn
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dockerconfig
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: DockerConfig
