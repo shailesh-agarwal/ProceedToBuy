@@ -1,16 +1,16 @@
 ﻿apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dockerconfig-deployment
+  name: proceedtobuyconfig-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: DockerConfig
+      app: ProceedToBuyConfig
   template:
     metadata:
       labels:
-        app: DockerConfig
+        app: ProceedToBuyConfig
     spec:
       containers:
       - name: proceedtobuyrepos
@@ -18,16 +18,16 @@ spec:
         ports:
         - containerPort: 8080
       imagePullSecrets:
-      - name: dconfigsn
+      - name: configsn
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: dockerconfig
+  name: proceedtobuyconfig
 spec:
   type: LoadBalancer
   ports:
   - port: 80
   selector:
-    app: DockerConfig
+    app: ProceedToBuyConfig
