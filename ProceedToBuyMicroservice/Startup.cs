@@ -27,10 +27,10 @@ namespace ProceedToBuyMicroservice
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddCors(c =>
-            {
-                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
-            });
+            //services.AddCors(c =>
+            //{
+            //    c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+            //});
 
             services.AddSwaggerGen(c =>
             {
@@ -51,7 +51,7 @@ namespace ProceedToBuyMicroservice
 
             app.UseRouting();
 
-            app.UseCors(options => options.AllowAnyOrigin());
+            //app.UseCors(options => options.AllowAnyOrigin());
 
             app.UseAuthorization();
 

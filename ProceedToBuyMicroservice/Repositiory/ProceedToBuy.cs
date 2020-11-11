@@ -12,7 +12,7 @@ namespace ProceedToBuyMicroservice.Repositiory
 {
     public class ProceedToBuy : IProceedToBuy
     {
-        readonly string Baseurl = "http://20.37.134.173/";
+        readonly string Baseurl = "http://40.76.160.150/";
 
        
         public async Task<Cart> AddProductToCart(int CustomerId, int ProductId, int ZipCode)
