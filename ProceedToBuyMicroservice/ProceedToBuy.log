@@ -1,0 +1,26 @@
+INFO  03:33:33  11:11:2020 Application started. Press Ctrl+C to shut down.
+INFO  03:33:33  11:11:2020 Application started. Press Ctrl+C to shut down.
+INFO  03:33:33  11:11:2020 Hosting environment: Development
+INFO  03:33:33  11:11:2020 Hosting environment: Development
+INFO  03:33:33  11:11:2020 Content root path: E:\My Documents\Cogni\MFPE\Deploy\ProceedToBuy\ProceedToBuyMicroservice
+INFO  03:33:33  11:11:2020 Content root path: E:\My Documents\Cogni\MFPE\Deploy\ProceedToBuy\ProceedToBuyMicroservice
+ERROR 03:35:39  11:11:2020 An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Endpoint ProceedToBuyMicroservice.Controllers.ProceedToBuyController.AddProductToCart (ProceedToBuyMicroservice) contains CORS metadata, but a middleware was not found that supports CORS.
+Configure your application startup by adding app.UseCors() inside the call to Configure(..) in the application startup code. The call to app.UseAuthorization() must appear between app.UseRouting() and app.UseEndpoints(...).
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingCorsMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ERROR 03:35:39  11:11:2020 An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Endpoint ProceedToBuyMicroservice.Controllers.ProceedToBuyController.AddProductToCart (ProceedToBuyMicroservice) contains CORS metadata, but a middleware was not found that supports CORS.
+Configure your application startup by adding app.UseCors() inside the call to Configure(..) in the application startup code. The call to app.UseAuthorization() must appear between app.UseRouting() and app.UseEndpoints(...).
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingCorsMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
